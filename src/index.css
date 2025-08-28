@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(ellipse at top right, #D1E7F5 0%, #B8D4E8 25%, #9bcdf4 50%, #d1e3f1 100%);
+    min-height: 100vh;
+    color: #2C3E50;
+  }
+}
+
+@layer components {
+  .glass-container {
+    @apply backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  }
+  
+  .glass-container-hover {
+    @apply transition-all duration-300 hover:bg-white/20 hover:border-white/30;
+  }
+  
+  .skill-bubble {
+    @apply transition-all duration-200 cursor-pointer;
+  }
+  
+  .skill-bubble:hover {
+    @apply scale-110;
+  }
+  
+  .floating-particle {
+    @apply absolute w-0.5 h-0.5 bg-white/20 rounded-full;
+  }
+}
